@@ -1,8 +1,9 @@
 import Pajaros.*
+import Eventos.*
 
-class Isla {
+object islaPajaro {
 	
-	const pajaros
+	const pajaros = [red, bomb, chuck, terence, matilda]
 	
 	method masFuertes() {
 		return pajaros.filter { pajaro => pajaro.soyFuerte() }
@@ -12,4 +13,9 @@ class Isla {
 		return self.masFuertes().sum { pajaro => pajaro.fuerza() }
 	}
 	
+	method queSuceda(unEvento) {
+		unEvento.afectarA(pajaros)
+	}
+	
 }
+

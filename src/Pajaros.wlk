@@ -14,6 +14,10 @@ class Pajaro {
 		return self.fuerza() > 50
 	}
 	
+	method tranquilizarse() {
+		ira = ira - 5
+	}
+	
 }
 
 class Rencoroso inherits Pajaro {
@@ -56,6 +60,10 @@ object chuck inherits Pajaro {
 	
 	override method enojarse() {
 		velocidad = velocidad * 2
+	}
+	
+	override method tranquilizarse() {
+		// nada
 	}
 }
 
