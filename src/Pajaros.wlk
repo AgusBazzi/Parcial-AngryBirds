@@ -18,6 +18,10 @@ class Pajaro {
 		ira = ira - 5
 	}
 	
+	method puedoDerribar(unObstaculo) {
+		return self.fuerza() > unObstaculo.resistencia()
+	}
+	
 }
 
 class Rencoroso inherits Pajaro {
